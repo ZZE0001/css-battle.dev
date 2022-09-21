@@ -1,0 +1,111 @@
+<div class="round"></div>
+<div class="line line-left"></div>
+<div class="line line-right"></div>
+<div class="serif serif-t"></div>
+<div class="serif serif-bl"></div>
+<div class="serif serif-br"></div>
+<div class="serif-brr"></div>
+<style>
+  body{
+    background: #EFF2F1;
+  }
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: #1C1C1C;
+  }
+  .round{
+    transform: translate(-70px, -90px);
+    width: 130;
+    height: 90;
+    border-radius: 0 50px 50px 0;
+    display: grid;
+    place-items:center;
+  }
+  .round:after {
+    content: '';
+    display: block;
+    width: 50;
+    height: 60;
+    background: #EFF2F1;
+    border-radius: 0 50px 50px 0;
+  }
+  .line {
+    width: 40;
+    height: 90;
+  }
+  .line-left{
+    transform: translate(-70px, 0px);
+  }
+  .line-right{
+    height: 104;
+    transform: translate(3px, -17px) rotate(-30deg);
+  }
+  .serif{
+    width: 20;
+    height: 21;
+    display: flex;
+  }
+  .serif:after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-style: solid;
+  }
+  .serif-t {
+    transform: translate(-90px, -90px);
+  }
+  .serif-t:after{
+    border-width: 12px 0 0 21px;
+    border-color: transparent transparent transparent #EFF2F1;
+    align-self: flex-end;
+  }
+  .serif-bl {
+    transform: translate(-90px, 69px);
+  }
+  .serif-bl:after{
+    border-width: 12px 21px 0 0;
+    border-color: #EFF2F1 transparent transparent transparent;
+  }
+  .serif-br {
+    transform: translate(-30px, 69px);
+  }
+  .serif-br:after{
+    border-width: 0 20px 12px 0;
+    border-color: transparent #EFF2F1 transparent transparent;
+  }
+  .serif-brr {
+    transform: translate(28px, 70px);
+    position: absolute;
+    width: 0;
+    height: 0;
+    background: transparent;
+    border-style: solid;
+    border-width: 0 38px 20px 37px;
+    border-color: transparent transparent #1C1C1C transparent;
+    z-index: -1;
+  }
+  .serif-brr:after{
+    content:'';
+    position:absolute;
+    top: 10;
+    left: 25;
+    width: 15;
+    height: 10;
+    background: #EFF2F1;
+  }
+  .serif-brr:before {
+    content:'';
+    position:absolute;
+    top: 10;
+    right: 30;
+    width: 10;
+    aspect-ratio: 1;
+    background: #EFF2F1;
+    transform: rotate(-30deg);
+  }
+</style>
