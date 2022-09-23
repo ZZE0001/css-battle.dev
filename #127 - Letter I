@@ -1,0 +1,77 @@
+<div class="with-dot"></div>
+<div class="stem">
+  <div class="curve curve-tl"></div>
+  <div class="curve curve-tr"></div>
+  <div class="curve curve-bl"></div>
+  <div class="curve curve-br"></div>
+</div>
+<div class="with-dot"></div>
+<style>
+  body {
+    background: #E3516E;
+  }
+  div {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    
+    width: 100px;
+    height: 30px;
+    
+    background: #FADE8B;
+  }
+  .with-dot {
+    border-radius: 15px;
+    transform: translate(-50px, -80px);
+  }
+  .with-dot:after {
+    position: absolute;
+    right:-40;
+    
+    width: 30px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    content: '';
+    
+    background: inherit;
+  }
+  .with-dot:nth-of-type(3) {
+    transform: translate(-50px, 50px) rotate(180deg);
+  }
+  .stem {
+    width: 30px;
+    height: 100px;
+
+    background: #FADE8B;
+    
+    transform: translate(-15px, -50px);
+  }
+  .curve {
+    width: 20px;
+    height: 20px;
+    
+    background: #FADE8B;
+  }
+  .curve:after {
+      display:block;
+    
+      width: inherit;
+      height: inherit;
+      border-radius: 0 50% 0 0;
+      content: '';
+    
+      background: #E3516E;
+  }
+  .curve-tl {
+    transform: translate(-35px, -50px);
+  }
+  .curve-tr {
+    transform: translate(15px, -50px) rotate(-90deg);
+  }
+  .curve-bl {
+    transform: translate(-35px, 30px) rotate(90deg);
+  }
+  .curve-br {
+    transform: translate(15px, 30px) rotate(180deg);
+  }
+</style>
